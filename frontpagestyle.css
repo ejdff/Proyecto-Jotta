@@ -1,0 +1,97 @@
+body {
+    background-color: blue;
+    font-family: "Muli", sans-serif;
+    margin: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Lucida Sans';
+}
+
+.header {
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.header__img1{
+    width: 7%;
+    height: 90%;
+}
+
+.menu{
+    background-color:yellow;
+    width: 25%;
+    height: 620px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.menu_img{
+    width: 20px;
+    height: 20px;
+}
+
+.main_menu{
+    width: 75%;
+    margin-left: 10px;
+}
+
+.menu_line{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px;
+    font-size: 10px;
+    width: 231px;
+    height: 52px;
+    margin-left: 10px;
+    
+}
+
+.data{
+    width: 74% ;
+}
+
+.global_info {
+    background-color: white;
+    width: 95%;
+    height: 150px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+
+.global_img{
+    width: 20%;
+    height: 100%;
+    margin-top: -18px;
+    align-self: center;
+}
+
+.countries{
+    background-color: green;
+    width: 95%;
+    height: 460px;
+    border: 2px solid black;
+}
+
+.c_data{
+    margin-left: 5px;
+}
+
+.result_box_c{
+    margin-left: 10px;
+}
