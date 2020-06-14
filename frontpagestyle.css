@@ -24,7 +24,7 @@ body {
 .menu{
     background-color:yellow;
     width: 25%;
-    height: 620px;
+    height: 100%;
     border: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -38,9 +38,15 @@ body {
     height: 20px;
 }
 
+.mainmenu_img{
+    width: 95%;
+    height: 20%;
+}
+
 .main_menu{
     width: 75%;
     margin-left: 10px;
+    font-size: 16px
 }
 
 .menu_line{
@@ -83,7 +89,7 @@ body {
 .countries{
     background-color: green;
     width: 95%;
-    height: 460px;
+    height:80%;
     border: 2px solid black;
 }
 
