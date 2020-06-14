@@ -1,6 +1,5 @@
 body {
     background-color: blue;
-    font-family: "Muli", sans-serif;
     margin: 0px;
     position: relative;
     display: flex;
@@ -88,10 +87,29 @@ body {
     border: 2px solid black;
 }
 
+.table_title{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c_line{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .c_data{
     margin-left: 5px;
+    width: 24%;
+    text-align: center;
 }
 
 .result_box_c{
-    margin-left: 10px;
+    margin-left: 5px;
+    width: 24%;
+    text-align: center;
 }

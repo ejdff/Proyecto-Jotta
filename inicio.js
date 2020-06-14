@@ -25,18 +25,23 @@ async function pasarData(){
     document.getElementById('boxB').innerHTML ='Total Recovered: '+ a.Global.TotalRecovered
     document.getElementById('boxC').innerHTML ='Total Deaths: '+ a.Global.TotalDeaths
 
-    let b =a.Countries.map(current => [current.TotalConfirmed, current.Country, ]).sort((a,b)=> b[0]-a[0]).slice(0,10)
+    console.log(a)
+    let b = a.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths ]).sort((a,b)=> b[0]-a[0]).slice(0,10)
+    console.log(b)
 
     for(i=0;i<b.length;i++){
-        let caja ='boxi'
-        document.getElementById(caja.replace('i',i)).innerHTML = b[i][1]+' '+ b[i][0]
+        var caja ='cni'
+        var caja1 ='tci'
+        let caja2 ='tri'
+        let caja3 ='tdi'
+        document.getElementById(caja.replace('i',i)).innerHTML = b[i][1]
+        document.getElementById(caja1.replace('i',i)).innerHTML = b[i][0]
+        document.getElementById(caja2.replace('i',i)).innerHTML = b[i][2]
+        document.getElementById(caja3.replace('i',i)).innerHTML = b[i][3]
     }
 }
 
 pasarData()
-
-
-
 
 
 
