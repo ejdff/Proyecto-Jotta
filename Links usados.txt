@@ -4,8 +4,12 @@ https://covid19api.com/#details
 Repositorio
 https://github.com/ejdff/Proyecto-Jotta
 
+Emoticones
+https://www.npmjs.com/package/emoji-flags
+
 Disenos maricas
 https://dribbble.com/search/covid%20web%20app
- flaticon.com
-
+flaticon.com
+https://coolors.co/5e1dfc-ab88ff-8f57fd-21c08b-e6af2e
+https://fonts.google.com/
 
