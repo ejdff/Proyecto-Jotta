@@ -81,17 +81,13 @@ body {
     width: 68%;
 }
 
-.menu:hover ul, ul:hover{
-    display:block;
-}
-
 .data{
-    width: 100% ;
+    width: 79% ;
     margin: 10px, 10px, 10px, 10px;
 }
 
 .global_info {
-    width: 75%;
+    width: 100%;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -108,13 +104,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     height: 50%;
-    width: 75%;
+    width: 100%;
     margin-top: -10px;
     margin-left: 15px;
 }
 
 .global_box{
     width: 49%;
+    height: 100%;
 }
 
 .rebox_flag_name{
@@ -144,12 +141,13 @@ body {
     height: 30%;
     width: 89%;
     font-size: 25px;
+    margin: 20px;
 }
 
 .global_img{
-    width: 20%;
+    width: 10%;
     height: 100%;
-    margin-top: -18px;
+    margin-top: 0px;
     align-self: center;
     margin-right: 20px;
 }
