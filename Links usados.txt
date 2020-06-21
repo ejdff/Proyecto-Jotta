@@ -3,6 +3,7 @@ https://covid19api.com/#details
 
 Repositorio
 https://github.com/ejdff/Proyecto-Jotta
+https://github.com/luciopaiva/country-flags
 
 Emoticones
 https://www.npmjs.com/package/emoji-flags
