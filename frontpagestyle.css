@@ -32,10 +32,9 @@ body {
 }
 
 .menu{
-    width: 20%;
-    height: 100%;
+    width: 100%;
+    height: 50px;
     border-radius: 10px;
-    margin-left: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,19 +48,18 @@ body {
     height: 35px;
 }
 
-
-.main_menu{
-    width: 75%;
-    text-decoration: underline;
-    text-align:right;
-    font-size: 25px;
-}
-
 .menu_list{
-    margin-top: 55px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     padding: 0px;
     list-style: none;
     position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .menu_line{
@@ -71,7 +69,7 @@ body {
     align-items: center;
     padding: 0px;
     text-align:right;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .menu_line_in{
@@ -82,17 +80,34 @@ body {
 }
 
 .data{
-    width: 79% ;
-    margin: 10px, 10px, 10px, 10px;
-}
-
-.global_info {
-    width: 100%;
-    height: 150px;
+    width: 100% ;
+    height: 115px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.data1{
+    width: 100% ;
+    height: 800px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.global_info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
     opacity: 0.9;
     border-radius: 10px;
@@ -103,15 +118,18 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     height: 50%;
     width: 100%;
-    margin-top: -10px;
     margin-left: 15px;
 }
 
 .global_box{
-    width: 49%;
+    width: 32%;
     height: 100%;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .rebox_flag_name{
@@ -123,7 +141,7 @@ body {
     align-items: center;
     border: 2px outset;
     width: 24%;
-    height: 60px;
+    height: 45px;
     margin-top: 1px;
 }
 .rebox_flag{
@@ -142,6 +160,9 @@ body {
     width: 89%;
     font-size: 25px;
     margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .global_img{
@@ -158,11 +179,12 @@ body {
 }
 
 .countries{
-    width: 95%;
+    width: 49%;
     height:40%;
     opacity: 0.9;
     border-radius: 10px;
     margin-left: 10px;
+    font-size: 11px;
 }
 
 .table_title{
@@ -186,7 +208,7 @@ body {
     background-color: #dae1e7;
     margin: 0px;
     width: 24%;
-    height: 60px;
+    height: 45px;
     text-align: center;
     border: 2px outset;
     display: flex;
@@ -198,10 +220,16 @@ body {
     background-color: #dae1e7;
     margin: 1px;
     width: 24%;
-    height: 60px;
+    height: 45px;
     text-align: center;
     border: 2px outset;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.canvas{
+    background-color: whitesmoke;
+    width: 49%;
+    height: 40%;
 }
