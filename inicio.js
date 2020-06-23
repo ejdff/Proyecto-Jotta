@@ -67,10 +67,35 @@ async function pasarData(){
         });
     }
 
-    
-
 }
 
 
 pasarData()
 
+function mostrar(){
+    document.getElementById('tendency').style.zIndex = 1
+    document.getElementById('symptoms').style.zIndex = -1
+    document.getElementById('control').style.zIndex = -1
+    document.getElementById('spiderman').style.zIndex = -1
+}
+
+function mostrar1(){
+    document.getElementById('tendency').style.zIndex = -1
+    document.getElementById('symptoms').style.zIndex = 1
+    document.getElementById('control').style.zIndex = -1
+    document.getElementById('spiderman').style.zIndex = -1
+}
+
+function mostrar2(){
+    document.getElementById('tendency').style.zIndex = -1
+    document.getElementById('symptoms').style.zIndex = -1
+    document.getElementById('control').style.zIndex = 1
+    document.getElementById('spiderman').style.zIndex = -1
+}
+
+function mostrar3(){
+    document.getElementById('tendency').style.zIndex = -1
+    document.getElementById('symptoms').style.zIndex = -1
+    document.getElementById('control').style.zIndex = -1
+    document.getElementById('spiderman').style.zIndex = 1
+}
