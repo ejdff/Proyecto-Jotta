@@ -27,7 +27,7 @@ async function pasarData(){
     document.getElementById('boxD').innerHTML ='Last date update: '+ a.Date.slice(0,10)
 
     console.log(a)
-    let b = a.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode]).sort((a,b)=> b[0]-a[0]).slice(0,10)
+    let b = a.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0]).slice(0,10)
 
     for(i=0;i<b.length;i++){
         //Creando id para el html
@@ -36,11 +36,13 @@ async function pasarData(){
         let caja2 ='tri'
         let caja3 ='tdi'
         let band ='flagi'
+        let nw = 'ntci'
         //Mandando data epecifica a id epecifico
         document.getElementById(caja.replace('i',i)).innerHTML = b[i][1]
         document.getElementById(caja1.replace('i',i)).innerHTML = b[i][0]
         document.getElementById(caja2.replace('i',i)).innerHTML = b[i][2]
         document.getElementById(caja3.replace('i',i)).innerHTML = b[i][3]
+        document.getElementById(nw.replace('i',i)).innerHTML = `+ ${b[i][5]}`
         //Generando Bandera
         let parentElement = document.getElementById(band.replace('i',i));
         let flag = new CountryFlag(parentElement);

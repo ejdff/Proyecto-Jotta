@@ -4,7 +4,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     font-family: 'Hind Siliguri', sans-serif;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .menu{
-    width: 10%;
+    width: 5%;
     height: 100%;
     margin:0px;
     display: flex;
@@ -72,6 +72,20 @@ body {
     margin-bottom: 20px;
 }
 
+.menu_line1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
 .menu_line_in{
     margin: 0px;
     margin-top: 10px;
@@ -88,7 +102,7 @@ body {
 
 .bigbox{
     background-color: #E1E5F4;
-    width: 89% ;
+    width: 94% ;
     height: 100%;
     border-radius: 10px;
     margin-right: 10px;
@@ -315,4 +329,40 @@ body {
 .trial_img{
     width: 100%;
     height: 100%;
+}
+
+.symptoms_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+
+}
+
+.symptoms_img{
+    width: 90%;
+    height: 90%;
+}
+
+.result_box_c2{
+    background-color: #dae1e7;
+    margin: 1px;
+    width: 24%;
+    height: 45px;
+    text-align: center;
+    border: 2px outset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+.text{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
 }
