@@ -11,7 +11,7 @@ body {
 
 .header {
     width: 100%;
-    height: 100px;
+    height: 150px;
     opacity: 0.9;
     border-radius: 10px;
     margin-left: 5px;
@@ -21,7 +21,7 @@ body {
 }
 
 .header__img1{
-    width: 8%;
+    width: 12%;
     height: 90%;
 }
 
