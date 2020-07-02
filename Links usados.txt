@@ -1,0 +1,17 @@
+API
+https://covid19api.com/#details
+
+Repositorio
+https://github.com/ejdff/Proyecto-Jotta
+https://github.com/luciopaiva/country-flags
+
+Emoticones
+https://www.npmjs.com/package/emoji-flags
+
+Disenos maricas
+https://dribbble.com/search/covid%20web%20app
+https://dribbble.com/shots/12121383/attachments/3754095?mode=media (modelo cool)
+flaticon.com
+https://coolors.co/5e1dfc-ab88ff-8f57fd-21c08b-e6af2e
+https://fonts.google.com/
+
