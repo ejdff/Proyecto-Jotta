@@ -20,9 +20,10 @@ body {
     justify-content: space-between;
 }
 
-.header__img1{
-    width: 8%;
+.header__img{
+    width: auto;
     height: 90%;
+    margin-left: 15px;
 }
 
 .title{
@@ -40,6 +41,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: center;
     position: fixed;
 }
 
@@ -60,6 +62,12 @@ body {
     justify-content: space-evenly;
 }
 
+.menu_line_top{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 .menu_line{
     display: flex;
     flex-direction: row;
@@ -71,6 +79,7 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 .menu_line1{
@@ -85,6 +94,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-size: 11px;
+    opacity: 0.5;
 }
 
 .menu_line_in{
@@ -93,12 +103,15 @@ body {
     padding: 0px;
     width: 100%;
     text-align: center;
+    opacity: 0.5;
 }
 
-.menu_line:hover{
+.menu_line:hover, .menu_line_in:hover {
     background-color: #f1faee;
     text-decoration: underline;
     cursor: pointer;
+    opacity: 0.9;
+    color: black;
 }
 
 .bigbox{
@@ -172,6 +185,14 @@ body {
     box-shadow: 2px 6px 12px rgba(0,0,0,0.2);
 }
 
+.global_img{
+    width: auto;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
+
 .rebox_flag_name{
     background-color: #dae1e7;
     display: flex;
@@ -204,14 +225,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.global_img{
-    width: 10%;
-    height: 100%;
-    margin-top: 0px;
-    align-self: center;
-    margin-right: 20px;
 }
 
 .big_one{
