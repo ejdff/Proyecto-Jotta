@@ -372,6 +372,8 @@ tr:nth-child(even) {background-color: #dad6d6;}
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .cname{
@@ -380,6 +382,7 @@ tr:nth-child(even) {background-color: #dad6d6;}
 }
 
 .canvas{
-    height: 95%;
-    width: 95%;
+    height: 88%;
+    width: 88%;
 }
+
