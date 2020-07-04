@@ -15,6 +15,7 @@ function llamarData() {
 
 
 
+
 async function pasarData(){
     try {
         var a = await llamarData()
@@ -32,6 +33,30 @@ async function pasarData(){
     let b = a.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0])
     //Separando info top 10 para gráfico
     let b1 = a.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0]).slice(0,10)
+    
+    
+    // Creando Grafica
+    for(i=0;i<b1.length;i++){
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+
+                // The data for our dataset
+                data: {
+                    labels: b1.map(value=>[value[1]]),
+                    datasets: [{
+                    label: 'Countries',
+                    backgroundColor: 'rgb(78, 106, 212)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: b.map(value=> value[0])
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    }
 
 
     //Crendo array de entrada para la tabla
@@ -60,91 +85,10 @@ async function pasarData(){
         }
     }
 
-    // Creando Grafica inicial
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'pie',
-            // The data for our dataset
-            data: {
-                labels: ['Sick', 'Recovered', 'Death'],
-                datasets: [{
-                label: 'Countries',
-                backgroundColor: [
-                    'rgb(78, 106, 212)',
-                    'rgb(79, 207, 63 )',
-                    'rgb(255, 45, 0 )'
-                ],
-                borderColor: 'rgb(255, 255, 255)',
-                data: [(b[0][0]-b[0][2]-b[0][3]),b[0][2],b[0][3]]
-            }]
-        },
-
-        // Configuration options go here
-        options: {}
-    });
-
-    //Nombre del primer pais
-    document.getElementById('cname').innerHTML = b[0][1]
-
-    //Bandera primer pais
-    let parentElement = document.getElementById('cflag');
-    let flag = new CountryFlag(parentElement);
-    flag.selectByAlpha2(b[0][4]);
-
 }
+
 
 pasarData()
-
-async function buscador(){
-    try{
-        var fruf = await llamarData()
-    } catch(error){
-        console.log('holy shit')
-    }
-
-    let oh = fruf.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0])
-    console.log(oh)
-    let inpt = document.getElementById('finder').value
-    let match = oh.filter(value=>value[1]===inpt)
-    console.log(match)
-
-    // Creando bandera
-    let old = document.getElementById('cflag').lastChild;
-    let chau = document.getElementById('cflag').removeChild(old);
-    console.log(chau)
-    let parentElement = document.getElementById('cflag');
-    let flag = new CountryFlag(parentElement);
-    flag.selectByAlpha2(match[0][4]);
-
-    //Nombre de pais
-    document.getElementById('cname').innerHTML = match[0][1]
-
-    // Creando Grafica
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'pie',
-            // The data for our dataset
-            data: {
-                labels: ['Sick', 'Recovered', 'Death'],
-                datasets: [{
-                label: 'Countries',
-                backgroundColor: [
-                    'rgb(78, 106, 212)',
-                    'rgb(79, 207, 63 )',
-                    'rgb(255, 45, 0 )'
-                ],
-                borderColor: 'rgb(255, 255, 255)',
-                data: [(match[0][0]-match[0][2]-match[0][3]),match[0][2],match[0][3]]
-            }]
-        },
-
-        // Configuration options go here
-        options: {}
-    });
-
-}
 
 function mostrar(){
     document.getElementById('tendency').style.zIndex = 1
