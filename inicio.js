@@ -98,21 +98,18 @@ pasarData()
 
 async function buscador(){
     try{
-        var fruf = await llamarData()
+        var scnd_data_call = await llamarData()
     } catch(error){
         console.log('holy shit')
     }
 
-    let oh = fruf.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0])
-    console.log(oh)
-    let inpt = document.getElementById('finder').value
-    let match = oh.filter(value=>value[1]===inpt)
-    console.log(match)
+    let scnd_data = scnd_data_call.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0])
+    let inpt = document.getElementById('finder').value.toLowerCase();
+    let match = scnd_data.filter(value=> value[1].toLowerCase().indexOf(inpt)===0)
 
     // Creando bandera
     let old = document.getElementById('cflag').lastChild;
     let chau = document.getElementById('cflag').removeChild(old);
-    console.log(chau)
     let parentElement = document.getElementById('cflag');
     let flag = new CountryFlag(parentElement);
     flag.selectByAlpha2(match[0][4]);
