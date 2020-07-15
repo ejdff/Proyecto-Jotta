@@ -92,6 +92,12 @@ async function pasarData(){
     let flag = new CountryFlag(parentElement);
     flag.selectByAlpha2(b[0][4]);
 
+    //Data del primer pais
+    document.getElementById('cd_line1').innerHTML ='Total cases: '+ b[0][0]
+    document.getElementById('cd_line2').innerHTML ='Recovered: '+ b[0][2]
+    document.getElementById('cd_line3').innerHTML ='Deaths: '+ b[0][3]
+    document.getElementById('cd_line4').innerHTML ='New Cases: +'+ b[0][5]
+
 }
 
 pasarData()
@@ -141,6 +147,10 @@ async function buscador(){
         options: {}
     });
 
+    document.getElementById('cd_line1').innerHTML ='Total cases: '+ match[0][0]
+    document.getElementById('cd_line2').innerHTML ='Recovered: '+ match[0][2]
+    document.getElementById('cd_line3').innerHTML ='Deaths: '+ match[0][3]
+    document.getElementById('cd_line4').innerHTML ='New Cases: +'+ match[0][5]
 }
 
 function mostrar(){
