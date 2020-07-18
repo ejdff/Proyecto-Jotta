@@ -111,7 +111,7 @@ async function buscador(){
 
     let scnd_data = scnd_data_call.Countries.map(current => [current.TotalConfirmed, current.Country, current.TotalRecovered, current.TotalDeaths, current.CountryCode, current.NewConfirmed]).sort((a,b)=> b[0]-a[0])
     let inpt = document.getElementById('finder').value.toLowerCase();
-    let match = scnd_data.filter(value=> value[1].toLowerCase().indexOf(inpt)===0)
+    let match = scnd_data.filter(value=> value[1].toLowerCase().indexOf(inpt)>=0)
 
     // Creando bandera
     let old = document.getElementById('cflag').lastChild;
